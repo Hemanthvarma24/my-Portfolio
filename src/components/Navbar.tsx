@@ -49,9 +49,7 @@ function Navbar() {
         {/* Logo */}
         <div className="flex flex-shrink-0 items-center ml-0 lg:ml-8">
           <Link
-            href="/"
-            className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text text-3xl font-bold"
-          >
+            className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text text-3xl font-bold" href={""}          >
             MHV
           </Link>
         </div>
