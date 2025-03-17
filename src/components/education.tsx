@@ -34,7 +34,7 @@ function Education() {
           {/* Animation Section */}
           <div className="flex justify-center">
             <div className="w-3/4 max-w-xs md:max-w-md">
-              <AnimationLottie animationPath={lottieFile} width={undefined} />
+              <AnimationLottie animationPath={lottieFile} />
             </div>
           </div>
 

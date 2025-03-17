@@ -29,7 +29,7 @@ function Experience() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6">
         <div className="flex justify-center items-center w-full">
           <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-            <AnimationLottie animationPath={experience} width={undefined} />
+            <AnimationLottie animationPath={experience}  />
           </div>
         </div>
 
