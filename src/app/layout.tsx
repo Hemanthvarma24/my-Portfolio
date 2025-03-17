@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Hemanth varma",
-  description: "Experienced full stack developer specializing in modern web technologies and elegant solutions.",
-  keywords: ["Full Stack Developer", "React", "Next.js", "Node.js", "TypeScript", "Web Development"],
+  description: "Experienced Frontend Developer specializing in modern web technologies and elegant solutions.",
+  keywords: ["Frontend Developerr", "React", "Next.js", "html", "TypeScript", "Web Development"],
   authors: [{ name: "Hemanth varma" }],
 }
 

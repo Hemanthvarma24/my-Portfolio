@@ -1,6 +1,6 @@
 "use client"
 
-import { experiences } from "@/utils/data/experience";
+import { experiences } from "@/utils/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import experience from "@/app/assets/lottie/code.json";

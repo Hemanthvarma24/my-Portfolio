@@ -1,6 +1,6 @@
 "use client";
 
-import { educations } from "@/utils/data/education";
+import { educations } from "@/utils/education";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import lottieFile from '@/app/assets/lottie/study.json';

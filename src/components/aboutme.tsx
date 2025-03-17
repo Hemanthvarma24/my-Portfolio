@@ -1,6 +1,6 @@
 "use client"
 
-import { personalData } from "@/utils/data/personal-data";
+import { personalData } from "@/utils/personal-data";
 import Image from "next/image";
 import profile from "@/app/assets/pic.jpg"
 

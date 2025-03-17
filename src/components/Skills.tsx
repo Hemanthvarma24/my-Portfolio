@@ -1,7 +1,7 @@
 "use client"
 
-import { skillsData } from "@/utils/data/skills"
-import { skillsImage } from "@/utils/data/skillsimg"
+import { skillsData } from "@/utils/skills"
+import { skillsImage } from "@/utils/skillsimg"
 import Image from "next/image"
 import Marquee from "react-fast-marquee"
 
