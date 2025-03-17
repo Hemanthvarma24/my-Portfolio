@@ -1,3 +1,5 @@
+"use client";
+
 import type React from "react"
 
 export const WebpackIcon: React.FC<{ className?: string }> = ({ className }) => (

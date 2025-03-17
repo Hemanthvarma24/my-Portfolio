@@ -10,8 +10,6 @@ import Education from "@/components/education";
 import ContactSection from "@/components/contact";
 
 export default function Home() {
-  // Remove the unused state or use it somewhere
-  // const [menuOpen, setMenuOpen] = useState(false);
   
   return (
     <div className="min-h-screen bg-[#0d1224] text-white overflow-x-hidden">
