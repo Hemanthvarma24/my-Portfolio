@@ -1,33 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    // Set mounted state to true after component mounts
-    setIsMounted(true);
-
-    // Ensure the code runs only in the browser
-    const handleOutsideClick = (event: MouseEvent) => {
-      const mobileMenu = document.getElementById("mobile-menu");
-      if (mobileMenu && !mobileMenu.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener("click", handleOutsideClick);
-    }
-    return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
-  }, [isOpen]);
+  const mobileMenuRef = useRef<HTMLDivElement | null>(null);
 
   const navLinks = [
     { href: "/#about", label: "ABOUT" },
@@ -38,18 +18,15 @@ function Navbar() {
     { href: "/#contact", label: "CONTACT" },
   ];
 
-  // Return null or a loading state if not mounted yet
-  if (!isMounted) {
-    return <nav className="bg-transparent px-6 md:px-12 relative"></nav>;
-  }
-
   return (
     <nav className="bg-transparent px-6 md:px-12 relative">
       <div className="flex items-center justify-between py-5">
         {/* Logo */}
         <div className="flex flex-shrink-0 items-center ml-0 lg:ml-8">
           <Link
-            className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text text-3xl font-bold" href={""}          >
+            className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text text-3xl font-bold"
+            href={""}
+          >
             MHV
           </Link>
         </div>
@@ -82,12 +59,14 @@ function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            id="mobile-menu"
+            ref={mobileMenuRef}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="absolute top-full left-0 w-full bg-black bg-opacity-90 md:hidden flex flex-col items-center py-4 space-y-3 z-40"
+            tabIndex={-1}
+            onBlur={() => setIsOpen(false)}
           >
             {navLinks.map(({ href, label }) => (
               <motion.div key={href} whileHover={{ scale: 1.05 }}>
