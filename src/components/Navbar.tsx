@@ -7,11 +7,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // Ensure the code runs only in the browser
-    if (typeof window === "undefined") return;
+    // Set mounted state to true after component mounts
+    setIsMounted(true);
 
+    // Ensure the code runs only in the browser
     const handleOutsideClick = (event: MouseEvent) => {
       const mobileMenu = document.getElementById("mobile-menu");
       if (mobileMenu && !mobileMenu.contains(event.target as Node)) {
@@ -35,6 +37,11 @@ function Navbar() {
     { href: "/#projects", label: "PROJECTS" },
     { href: "/#contact", label: "CONTACT" },
   ];
+
+  // Return null or a loading state if not mounted yet
+  if (!isMounted) {
+    return <nav className="bg-transparent px-6 md:px-12 relative"></nav>;
+  }
 
   return (
     <nav className="bg-transparent px-6 md:px-12 relative">
