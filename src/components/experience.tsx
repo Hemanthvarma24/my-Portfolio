@@ -3,9 +3,9 @@
 import { experiences } from "@/utils/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import experience from "@/app/assets/lottie/code.json";
-import AnimationLottie from "@/app/animation-lottie";
-import section from "@/app/assets/svg/hero.svg";
+import experience from "@/assets/lottie/code.json";
+import AnimationLottie from "@/components/animation-lottie";
+import section from "@/assets/svg/hero.svg";
 
 function Experience() {
   return (

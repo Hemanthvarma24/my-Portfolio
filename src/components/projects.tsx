@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
-import project1 from "@/app/assets/shoppe.png";
-import project2 from "@/app/assets/doccure.png";
-import project3 from "@/app/assets/siddha.jpeg";
-import project4 from "@/app/assets/qualifit-img.png";
-import project5 from "@/app/assets/pranic-healing.png";
-import project6 from "@/app/assets/events.png";
+import project1 from "@/assets/shoppe.png";
+import project2 from "@/assets/doccure.png";
+import project3 from "@/assets/siddha.jpeg";
+import project4 from "@/assets/qualifit-img.png";
+import project5 from "@/assets/pranic-healing.png";
+import project6 from "@/assets/events.png";
 
 const projects = [
   {

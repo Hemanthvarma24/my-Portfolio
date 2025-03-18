@@ -2,7 +2,7 @@
 
 import { personalData } from "@/utils/personal-data";
 import Image from "next/image";
-import profile from "@/app/assets/pic.jpg"
+import profile from "@/assets/pic.jpg"
 
 function AboutSection() {
   return (

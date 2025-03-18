@@ -7,7 +7,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import hero from "@/app/assets/svg/hero.svg";
+import hero from "@/assets/svg/hero.svg";
 import { motion } from "framer-motion";
 
 function HeroSection() {

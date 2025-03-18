@@ -3,10 +3,10 @@
 import { educations } from "@/utils/education";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import lottieFile from '@/app/assets/lottie/study.json';
-import AnimationLottie from "@/app/animation-lottie";
-import section from "@/app/assets/svg/hero.svg";
-import blur from "@/app/assets/svg/blur-23.svg";
+import lottieFile from '@/assets/lottie/study.json';
+import AnimationLottie from "@/components/animation-lottie";
+import section from "@/assets/svg/hero.svg";
+import blur from "@/assets/svg/blur-23.svg";
 
 function Education() {
   return (
